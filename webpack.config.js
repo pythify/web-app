@@ -5,7 +5,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = function webpackConfig(env) {
-	let plugins = [
+	const plugins = [
 		new HtmlWebpackPlugin({
 			template: './public/index.html'
 		})

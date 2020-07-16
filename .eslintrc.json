@@ -17,6 +17,7 @@
 		"import/prefer-default-export": "off",
 		"semi": "off",
 		"indent": ["error", "tab"],
-		"no-tabs": "off"
+		"no-tabs": "off",
+		"comma-dangle": ["error", "never"]
 	}
 }
