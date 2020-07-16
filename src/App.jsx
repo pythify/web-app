@@ -1,14 +1,14 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './scss/global.scss'
-import { Register } from './pages'
+import { RegisterPage } from './pages'
 
 export function App() {
 	return (
 		<Router>
 			<Switch>
 				<Route path="/register">
-					<Register />
+					<RegisterPage />
 				</Route>
 			</Switch>
 		</Router>

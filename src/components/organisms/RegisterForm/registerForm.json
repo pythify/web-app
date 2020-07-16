@@ -1,0 +1,21 @@
+{
+	"title": "Register",
+	"fields": [
+		{
+			"type": "text",
+			"label": "Name"
+		},
+		{
+			"type": "email",
+			"label": "Email"
+		},
+		{
+			"type": "password",
+			"label": "Password"
+		},
+		{
+			"type": "password",
+			"label": "Confirm password"
+		}
+	]
+}
