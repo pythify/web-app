@@ -2,18 +2,32 @@
 	"title": "Register",
 	"fields": [
 		{
+			"id": "register-form-first-name",
 			"type": "text",
-			"label": "Name"
+			"label": "First name"
 		},
 		{
+			"id": "register-form-last-name",
+			"type": "text",
+			"label": "Last name"
+		},
+		{
+			"id": "register-form-username",
+			"type": "text",
+			"label": "Username"
+		},
+		{
+			"id": "register-form-email",
 			"type": "email",
 			"label": "Email"
 		},
 		{
+			"id": "register-form-password",
 			"type": "password",
 			"label": "Password"
 		},
 		{
+			"id": "register-form-password-confirmation",
 			"type": "password",
 			"label": "Confirm password"
 		}

@@ -1,0 +1,23 @@
+@import '../../../scss/variables.scss';
+
+.RegisterForm {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	background-color: $color-boxes;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	h1 {
+		text-align: center;
+	}
+	&__form-container {
+		padding: 10px;
+		width: 400px;
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
