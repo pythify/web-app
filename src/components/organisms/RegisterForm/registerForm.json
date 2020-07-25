@@ -5,35 +5,41 @@
 			"id": "register-form-first-name",
 			"type": "text",
 			"label": "First name",
-			"placeholder": "John"
+			"placeholder": "John",
+			"required": true
 		},
 		{
 			"id": "register-form-last-name",
 			"type": "text",
 			"label": "Last name",
-			"placeholder": "Doe"
+			"placeholder": "Doe",
+			"required": true
 		},
 		{
 			"id": "register-form-username",
 			"type": "text",
 			"label": "Username",
-			"placeholder": "john.doe"
+			"placeholder": "john.doe",
+			"required": true
 		},
 		{
 			"id": "register-form-email",
 			"type": "email",
 			"label": "Email",
-			"placeholder": "john.doe@example.com"
+			"placeholder": "john.doe@example.com",
+			"required": true
 		},
 		{
 			"id": "register-form-password",
 			"type": "password",
-			"label": "Password"
+			"label": "Password",
+			"required": true
 		},
 		{
 			"id": "register-form-password-confirmation",
 			"type": "password",
-			"label": "Confirm password"
+			"label": "Confirm password",
+			"required": true
 		}
 	]
 }
