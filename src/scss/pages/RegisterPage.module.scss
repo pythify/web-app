@@ -1,0 +1,10 @@
+@import '../mixins.scss';
+
+.RegisterPage {
+	@include container;
+	@include display-grid;
+	@include grid-template-columns(1fr);
+	@include media(tablet) {
+		@include grid-template-columns(1fr 400px);
+	}
+}
