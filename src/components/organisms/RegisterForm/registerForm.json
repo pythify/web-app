@@ -4,22 +4,26 @@
 		{
 			"id": "register-form-first-name",
 			"type": "text",
-			"label": "First name"
+			"label": "First name",
+			"placeholder": "John"
 		},
 		{
 			"id": "register-form-last-name",
 			"type": "text",
-			"label": "Last name"
+			"label": "Last name",
+			"placeholder": "Doe"
 		},
 		{
 			"id": "register-form-username",
 			"type": "text",
-			"label": "Username"
+			"label": "Username",
+			"placeholder": "john.doe"
 		},
 		{
 			"id": "register-form-email",
 			"type": "email",
-			"label": "Email"
+			"label": "Email",
+			"placeholder": "john.doe@example.com"
 		},
 		{
 			"id": "register-form-password",
