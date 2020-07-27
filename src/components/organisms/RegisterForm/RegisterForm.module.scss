@@ -1,7 +1,6 @@
 @import '../../../scss/variables.scss';
 
 .RegisterForm {
-	width: 400px;
 	margin-top: 50px;
 	background-color: $color-boxes;
 	display: flex;
@@ -13,8 +12,6 @@
 	}
 	&__form-container {
 		padding: 16px;
-		width: 400px;
-		height: 500px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

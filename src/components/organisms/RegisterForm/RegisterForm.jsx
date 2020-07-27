@@ -3,6 +3,7 @@ import styles from './RegisterForm.module.scss'
 
 import registerFormElements from './registerForm.json'
 import { FormField } from '../../molecules'
+import { Button } from '../../atoms'
 
 export function RegisterForm() {
 	return (
@@ -12,6 +13,7 @@ export function RegisterForm() {
 				{registerFormElements.fields.map((field) => (
 					<FormField key={field.id} {...field} />
 				))}
+				<Button>Sign Up</Button>
 			</div>
 		</form>
 	)
