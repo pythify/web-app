@@ -1,23 +1,26 @@
 {
-	"env": {
-		"browser": true,
-		"es2020": true,
-		"node": true
-	},
-	"extends": ["plugin:react/recommended", "airbnb"],
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": 11,
-		"sourceType": "module"
-	},
-	"plugins": ["react"],
-	"rules": {
-		"import/prefer-default-export": "off",
-		"semi": "off",
-		"comma-dangle": ["error", "never"],
-		"react/jsx-props-no-spreading": "off",
-		"react/button-has-type": "off"
-	}
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "max-len": ["error", { "code": 80 }],
+    "import/prefer-default-export": "off",
+    "semi": "off",
+    "comma-dangle": ["error", "never"],
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "object-curly-newline": "off",
+    "react/forbid-prop-types": "off"
+  }
 }

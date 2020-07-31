@@ -1,45 +1,70 @@
 {
-	"title": "Register",
-	"fields": [
-		{
-			"id": "register-form-first-name",
-			"type": "text",
-			"label": "First name",
-			"placeholder": "John",
-			"required": true
-		},
-		{
-			"id": "register-form-last-name",
-			"type": "text",
-			"label": "Last name",
-			"placeholder": "Doe",
-			"required": true
-		},
-		{
-			"id": "register-form-username",
-			"type": "text",
-			"label": "Username",
-			"placeholder": "john.doe",
-			"required": true
-		},
-		{
-			"id": "register-form-email",
-			"type": "email",
-			"label": "Email",
-			"placeholder": "john.doe@example.com",
-			"required": true
-		},
-		{
-			"id": "register-form-password",
-			"type": "password",
-			"label": "Password",
-			"required": true
-		},
-		{
-			"id": "register-form-password-confirmation",
-			"type": "password",
-			"label": "Confirm password",
-			"required": true
-		}
-	]
+  "title": "Register",
+  "fields": [
+    {
+      "id": "register-form-first-name",
+      "label": "First name",
+      "input": {
+        "type": "text",
+        "placeholder": "John"
+      },
+      "registerProps": {
+        "required": "First name is required"
+      }
+    },
+    {
+      "id": "register-form-last-name",
+      "label": "Last name",
+      "input": {
+        "type": "text",
+        "placeholder": "Doe"
+      },
+      "registerProps": {
+        "required": "Last name is required"
+      }
+    },
+    {
+      "id": "register-form-username",
+      "label": "Username",
+      "input": {
+        "type": "text",
+        "placeholder": "john.doe"
+      },
+      "registerProps": {
+        "required": "Username is required (min 3 characters)",
+        "minLength": 3
+      }
+    },
+    {
+      "id": "register-form-email",
+      "label": "Email",
+      "input": {
+        "type": "email",
+        "placeholder": "john.doe@example.com"
+      },
+      "registerProps": {
+        "required": "Email is required"
+      }
+    },
+    {
+      "id": "register-form-password",
+      "label": "Password",
+      "input": {
+        "type": "password"
+      },
+      "registerProps": {
+        "required": "Password is required"
+      }
+    },
+    {
+      "id": "register-form-password-confirmation",
+      "label": "Confirm password",
+      "input": {
+        "type": "password"
+      },
+      "registerProps": {
+        "required": "Password must match"
+      }
+    }
+  ]
 }

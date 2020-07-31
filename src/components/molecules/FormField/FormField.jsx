@@ -1,30 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { FormInput } from '../../atoms'
-import styles from './FormField.module.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { FormInput } from '../../atoms';
+import styles from './FormField.module.scss';
 
-export function FormField({
-  label, type, id, required, register, ...rest
-}) {
+export function FormField({ id, label, input, register, error }) {
   return (
     <div className={styles.FormField}>
-      <label htmlFor={id}>
-        {label}
-        {required && ' *'}
-      </label>
-      <FormInput variant={type} name={id} required={required} register={register} {...rest} />
+      <label htmlFor={id}>{label}</label>
+      <FormInput name={id} register={register} {...input} />
+      {error && <p className={styles.FormField__error}>{error.message}</p>}
     </div>
-  )
+  );
 }
 
 FormField.propTypes = {
-  label: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  required: PropTypes.bool,
-  register: PropTypes.func.isRequired
-}
+  label: PropTypes.string.isRequired,
+  input: PropTypes.object.isRequired,
+  register: PropTypes.func.isRequired,
+  error: PropTypes.object
+};
 
 FormField.defaultProps = {
-  required: false
-}
+  error: {}
+};
