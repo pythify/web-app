@@ -16,9 +16,8 @@
 	"rules": {
 		"import/prefer-default-export": "off",
 		"semi": "off",
-		"indent": ["error", "tab"],
-		"no-tabs": "off",
 		"comma-dangle": ["error", "never"],
-		"react/jsx-indent": [4, "tab"]
+		"react/jsx-props-no-spreading": "off",
+		"react/button-has-type": "off"
 	}
 }

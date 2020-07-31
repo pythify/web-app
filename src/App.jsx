@@ -4,13 +4,13 @@ import './scss/global.scss'
 import { RegisterPage } from './pages'
 
 export function App() {
-	return (
-		<Router>
-			<Switch>
-				<Route path="/register">
-					<RegisterPage />
-				</Route>
-			</Switch>
-		</Router>
-	)
+  return (
+    <Router>
+      <Switch>
+        <Route path="/register">
+          <RegisterPage />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
