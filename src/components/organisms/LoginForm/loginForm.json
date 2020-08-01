@@ -1,0 +1,26 @@
+{
+  "title": "Login",
+  "fields": [
+    {
+      "id": "login-form-email",
+      "label": "Email",
+      "input": {
+        "type": "email",
+        "placeholder": "john.doe@example.com"
+      },
+      "registerProps": {
+        "required": "Email is required"
+      }
+    },
+    {
+      "id": "login-form-password",
+      "label": "Password",
+      "input": {
+        "type": "password"
+      },
+      "registerProps": {
+        "required": "Password is required"
+      }
+    }
+  ]
+}

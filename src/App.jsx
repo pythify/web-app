@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './scss/global.scss';
-import { RegisterPage } from './pages';
+import { RegisterPage, LoginPage } from './pages';
 
 export function App() {
   return (
@@ -9,6 +9,9 @@ export function App() {
       <Switch>
         <Route path="/register">
           <RegisterPage />
+        </Route>
+        <Route path="/login">
+          <LoginPage />
         </Route>
       </Switch>
     </Router>
