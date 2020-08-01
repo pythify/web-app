@@ -4,14 +4,14 @@ import styles from './RegisterForm.module.scss';
 import registerFormElements from './registerForm.json';
 import { FormField } from '../../molecules';
 import { Button } from '../../atoms';
-import { parseSignupData } from './helpers';
+import { parseSignupData, sendSignupInfo } from './helpers';
 
 export function RegisterForm() {
   const { handleSubmit, register, errors } = useForm();
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
     const parsedData = parseSignupData(data);
-    console.log(parsedData);
+    await sendSignupInfo(parsedData);
   }
   return (
     <form className={styles.RegisterForm} onSubmit={handleSubmit(onSubmit)}>

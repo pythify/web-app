@@ -10,3 +10,7 @@ export function parseSignupData(data) {
 
   return parsedData;
 }
+
+export async function sendSignupInfo(data) {
+  return new Promise((resolve) => resolve(data));
+}
