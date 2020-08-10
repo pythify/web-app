@@ -1,10 +1,19 @@
 @import '../mixins.scss';
 
 .RegisterPage {
-	@include container;
-	@include display-grid;
-	@include grid-template-columns(1fr);
-	@include media(tablet) {
-		@include grid-template-columns(1fr 400px);
-	}
+  margin-top: 100px;
+  @include container;
+  @include display-grid;
+  @include grid-template-columns(1fr);
+  @include media(tablet) {
+    @include grid-template-columns(1fr 400px);
+  }
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      object-fit: fill;
+    }
+  }
 }
