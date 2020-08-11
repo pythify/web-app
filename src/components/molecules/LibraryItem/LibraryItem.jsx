@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './LibraryItem.scss';
+import styles from './LibraryItem.module.scss';
 
 import { CoverAlbum } from '../../atoms';
 
 export function LibraryItem() {
   return (
-    <div className="artist_list-container-item">
+    <div className={styles.Artist_listContainerItem}>
       <CoverAlbum />
       <h3>Title</h3>
-      <div className="artist_list-container-description">
+      <div className={styles.Artist_listContainerDescription}>
         <p>3:33</p>
       </div>
     </div>

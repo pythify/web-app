@@ -1,5 +1,5 @@
 import React from 'react';
-import './PlayerControl.scss';
+import styles from './PlayerControl.module.scss';
 
 import random from '../../../assets/images/random.png';
 import prev from '../../../assets/images/prev.png';
@@ -9,25 +9,25 @@ import repeat from '../../../assets/images/repeat.png';
 
 export function PlayerControl() {
   return (
-    <div className="player-panel">
-      <div className="player-panel-icons">
-        <span className="player-panel-icon">
+    <div className={styles.PlayerPanel}>
+      <div className={styles.PlayerPanelIcons}>
+        <span className={styles.PlayerPanelIcon}>
           <img src={random} alt="" />
         </span>
-        <span className="player-panel-icon">
+        <span className={styles.PlayerPanelIcon}>
           <img src={prev} alt="" />
         </span>
-        <span className="player-panel-icon">
+        <span className={styles.PlayerPanelIcon}>
           <img src={play} alt="" />
         </span>
-        <span className="player-panel-icon">
+        <span className={styles.PlayerPanelIcon}>
           <img src={next} alt="" />
         </span>
-        <span className="player-panel-icon">
+        <span className={styles.PlayerPanelIcon}>
           <img src={repeat} alt="" />
         </span>
       </div>
-      <div className="player-panel-bar"></div>
+      <div className={styles.PlayerPanelBar}></div>
     </div>
   );
 }

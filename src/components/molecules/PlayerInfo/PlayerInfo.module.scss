@@ -1,0 +1,12 @@
+.PlayerCover {
+  grid-area: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &Details {
+    color: #ffffff;
+    p {
+      color: #b3b3b3;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import './TitleCategory.scss';
+import styles from './TitleCategory.module.scss';
 
 export function TitleCategory() {
   return (
-    <h2 className="titleCategory">
+    <h2 className={styles.TitleCategory}>
       selected Title (album, artist, playlist.queue)
     </h2>
   );

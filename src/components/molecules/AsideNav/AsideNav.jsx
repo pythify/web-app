@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './AsideNav';
+import styles from './AsideNav.module.scss';
 import { TitleAside } from '../../atoms';
 
 export function AsideNav() {
   return (
-    <aside className="menu">
+    <aside className={styles.Menu}>
       <TitleAside />
       <TitleAside />
       <TitleAside />
