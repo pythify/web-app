@@ -4,7 +4,7 @@ import './scss/global.scss';
 import { RegisterPage, LoginPage, Library, NotFound } from './pages';
 
 const UserLogged = ({ children }) => {
-  return children({ isAuth: false });
+  return children({ isAuth: true });
 };
 export function App() {
   return (
