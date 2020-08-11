@@ -1,9 +1,9 @@
 import React from 'react';
-import './TitleAside.scss';
+import styles from './TitleAside.module.scss';
 
 export function TitleAside() {
   return (
-    <div className="menu-link">
+    <div className={styles.MenuLink}>
       <a href="">ARTIST</a>
     </div>
   );

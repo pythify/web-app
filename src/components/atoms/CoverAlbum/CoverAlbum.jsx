@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './CoverAlbum.scss';
+import styles from './CoverAlbum.module.scss';
 import banner from '../../../assets/images/BannerLogin.svg';
 
 export function CoverAlbum() {
   return (
-    <figure className="artist_list-container-image">
+    <figure className={styles.Artist_listContainerImage}>
       <img src={banner} alt="cover" />
     </figure>
   );
