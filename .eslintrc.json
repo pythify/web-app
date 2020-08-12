@@ -14,13 +14,14 @@
   },
   "plugins": ["react"],
   "rules": {
-    "max-len": ["error", { "code": 80 }],
+    "max-len": ["error", { "code": 80, "ignoreUrls": true, "ignoreComments": true }],
     "import/prefer-default-export": "off",
     "semi": "off",
     "comma-dangle": ["error", "never"],
     "react/jsx-props-no-spreading": "off",
     "react/button-has-type": "off",
     "object-curly-newline": "off",
-    "react/forbid-prop-types": "off"
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/media-has-caption": "off"
   }
 }
