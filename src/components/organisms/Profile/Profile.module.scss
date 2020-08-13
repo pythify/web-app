@@ -1,0 +1,10 @@
+.Profile {
+  width: 70%;
+  height: 530px;
+  margin: 50px auto;
+  background-color: #282828;
+  display: grid;
+  grid-template-rows: 2fr repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}

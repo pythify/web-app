@@ -1,7 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './scss/global.scss';
-import { RegisterPage, LoginPage, Library, NotFound } from './pages';
+import {
+  RegisterPage,
+  LoginPage,
+  Library,
+  NotFound,
+  ProfilePage
+} from './pages';
 
 const UserLogged = ({ children }) => {
   return children({ isAuth: true });
@@ -29,6 +35,21 @@ export function App() {
                   </Route>
                 ) : (
                   <Route exact path="/library">
+                    <LoginPage />
+                  </Route>
+                )
+              }
+            </UserLogged>
+          </Route>
+          <Route exact path="/profile">
+            <UserLogged>
+              {({ isAuth }) =>
+                isAuth ? (
+                  <Route exact path="/profile">
+                    <ProfilePage />
+                  </Route>
+                ) : (
+                  <Route exact path="/profile">
                     <LoginPage />
                   </Route>
                 )
