@@ -1,12 +1,14 @@
 .Player {
   position: fixed;
-  left: 0;
   bottom: 0;
-  width: 100%;
+  // right: 0;
+  width: calc(100% - 230px);
   height: 125px;
+  padding: 20px;
   background-color: #282828;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: 'cover player empty';
+  justify-items: center;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 'cover player';
   align-content: center;
 }

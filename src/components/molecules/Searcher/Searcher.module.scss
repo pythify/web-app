@@ -1,0 +1,13 @@
+.Searcher {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #282828;
+  &__Options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
