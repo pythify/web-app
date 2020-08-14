@@ -1,23 +1,23 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = function webpackConfig(env) {
   const plugins = [
     new HtmlWebpackPlugin({
       template: './public/index.html'
     })
-  ];
+  ]
 
   if (env.NODE_ENV === 'production') {
-    plugins.push(new CleanWebpackPlugin());
-    plugins.push(new MiniCssExtractPlugin());
+    plugins.push(new CleanWebpackPlugin())
+    plugins.push(new MiniCssExtractPlugin())
   }
 
   return {
-    entry: './src/index.js',
+    entry: ['@babel/polyfill', './src/index.js'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].js',
@@ -85,5 +85,5 @@ module.exports = function webpackConfig(env) {
     optimization: {
       minimizer: [new OptimizeCSSAssetsPlugin({})]
     }
-  };
-};
+  }
+}

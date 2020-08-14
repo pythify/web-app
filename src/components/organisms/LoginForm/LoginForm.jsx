@@ -1,18 +1,26 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import styles from './LoginForm.module.scss';
-import registerFormElements from './loginForm.json';
-import { FormField } from '../../molecules';
-import { Button } from '../../atoms';
-import { parseSignupData, sendSignupInfo } from './helpers';
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
+import { loginAsyncUser } from '../../../data/slices/user'
+
+import registerFormElements from './loginForm.json'
+import { FormField } from '../../molecules'
+import { Button } from '../../atoms'
+import { parseSignupData } from './helpers'
+import styles from './LoginForm.module.scss'
 
 export function LoginForm() {
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register, errors } = useForm()
+  const dispatch = useDispatch()
+  const { push } = useHistory()
 
   async function onSubmit(data) {
-    const parsedData = parseSignupData(data);
-    await sendSignupInfo(parsedData);
+    const parsedData = parseSignupData(data)
+    await dispatch(loginAsyncUser(parsedData))
+    push('/')
   }
+
   return (
     <form className={styles.LoginForm} onSubmit={handleSubmit(onSubmit)}>
       <h1>{registerFormElements.title}</h1>
@@ -30,5 +38,5 @@ export function LoginForm() {
         <Button>Sign Up</Button>
       </div>
     </form>
-  );
+  )
 }

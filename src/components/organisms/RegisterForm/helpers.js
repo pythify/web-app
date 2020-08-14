@@ -6,11 +6,7 @@ export function parseSignupData(data) {
     password_confirmation: data['register-form-password-confirmation'],
     first_name: data['register-form-first-name'],
     last_name: data['register-form-last-name']
-  };
+  }
 
-  return parsedData;
-}
-
-export async function sendSignupInfo(data) {
-  return new Promise((resolve) => resolve(data));
+  return parsedData
 }

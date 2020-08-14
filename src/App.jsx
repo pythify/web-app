@@ -1,41 +1,53 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './scss/global.scss';
-import { RegisterPage, LoginPage, Library, NotFound } from './pages';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import './scss/global.scss'
+import { RegisterPage, LoginPage, Library, NotFound } from './pages'
 
-const UserLogged = ({ children }) => children({ isAuth: true });
+// TODO
+// eslint-disable-next-line react/prop-types
+function PrivateRoute({ children, ...rest }) {
+  const username = useSelector((state) => state.user.username)
+  const isAuthenticated = username !== null
+
+  return (
+    <Route
+      {...rest}
+      // eslint-disable-next-line no-confusing-arrow
+      render={({ location }) =>
+        isAuthenticated ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
+  )
+}
 
 export function App() {
   return (
     <>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <RegisterPage />
-          </Route>
+          <PrivateRoute exact path="/">
+            <Library />
+          </PrivateRoute>
           <Route exact path="/register">
             <RegisterPage />
           </Route>
           <Route exact path="/login">
             <LoginPage />
-          </Route>
-          <Route exact path="/library">
-            <UserLogged>
-              {({ isAuth }) => {
-                if (isAuth) {
-                  return (
-                    <Route exact path="/library">
-                      <Library />
-                    </Route>
-                  );
-                }
-                return (
-                  <Route exact path="/library">
-                    <LoginPage />
-                  </Route>
-                );
-              }}
-            </UserLogged>
           </Route>
           <Route>
             <NotFound />
@@ -43,5 +55,5 @@ export function App() {
         </Switch>
       </Router>
     </>
-  );
+  )
 }
