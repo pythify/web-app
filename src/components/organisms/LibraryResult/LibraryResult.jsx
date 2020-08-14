@@ -11,18 +11,16 @@ export function LibraryResult() {
     <section className={styles.ArtistList}>
       <div>
         <TitleCategory props="Resultados" />
-        {songsInfo.data.map((item) => {
-          return (
-            <LibraryItem
-              key={item.id}
-              urlsong={item.preview}
-              title={item.title}
-              album={item.album.title}
-              cover={item.album.cover_small}
-              albumName={item.title}
-            />
-          )
-        })}
+        {songsInfo.data.map((item) => (
+          <LibraryItem
+            key={item.id}
+            urlsong={item.preview}
+            title={item.title}
+            album={item.album.title}
+            cover={item.album.cover_small}
+            albumName={item.title}
+          />
+        ))}
 
         <Player />
       </div>
