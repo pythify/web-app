@@ -62,7 +62,7 @@ export const playerSlice = createSlice({
   initialState: playerInitialState,
   reducers: {
     play: (state, { payload }) => {
-      state.playingSong = state[payload].preview
+      state.playingSong = state.songs[payload].preview
     }
   },
   extraReducers: {
@@ -80,7 +80,7 @@ export const playerSlice = createSlice({
 
 export default playerSlice.reducer
 
-export const playAction = playerSlice.actions.play
+export const { play: playAction } = playerSlice.actions
 
 export const playerAsyncActions = {
   artists: fetchArtists,

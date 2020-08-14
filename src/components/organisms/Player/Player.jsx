@@ -1,18 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 
-export function Player({ url }) {
+export function Player() {
+  const { playingSong } = useSelector((state) => state.player)
+
   return (
     <div>
-      <audio controls src={url} />
+      <audio controls autoPlay src={playingSong} />
     </div>
   )
-}
-
-Player.propTypes = {
-  url: PropTypes.string
-}
-
-Player.defaultProps = {
-  url: ''
 }
