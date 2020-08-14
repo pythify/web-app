@@ -12,3 +12,11 @@
   @include display-grid();
   @include grid-template-columns(repeat(auto-fit, minmax(300px, 1fr)));
 }
+
+.LibraryResult__player {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -40,9 +40,9 @@ export function App() {
     <>
       <Router>
         <Switch>
-          <PrivateRoute exact path="/">
+          <Route exact path="/">
             <Library />
-          </PrivateRoute>
+          </Route>
           <Route exact path="/register">
             <RegisterPage />
           </Route>

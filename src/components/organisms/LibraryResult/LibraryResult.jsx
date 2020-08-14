@@ -22,7 +22,9 @@ export function LibraryResult() {
             />
           ))}
         </div>
-        <Player />
+        <div className={styles.LibraryResult__player}>
+          <Player />
+        </div>
       </div>
     </section>
   )
