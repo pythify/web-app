@@ -11,7 +11,9 @@ export const register = ({
 }) =>
   fetch(`${API_BASE_URL}/users/signup/`, {
     method: 'POST',
-    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify({
       email,
       username,
@@ -38,6 +40,9 @@ export const verify = ({ token }) => {
 export const login = ({ email, password }) =>
   fetch(`${API_BASE_URL}/users/login/`, {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify({ email, password })
   })
     .then((response) => response.json())
