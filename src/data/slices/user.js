@@ -32,7 +32,7 @@ const registerUser = createAsyncThunk(
 }) */
 
 const loginUser = createAsyncThunk('users/fetchLogin', async (loginData) => {
-  const loginUserData = await userApi.register(loginData)
+  const loginUserData = await userApi.login(loginData)
   return loginUserData
 })
 
