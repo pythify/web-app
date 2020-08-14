@@ -1,0 +1,13 @@
+{
+  "first": {
+    "label": "Nombre",
+    "type": "text",
+    "placeholder": "Nombre"
+  },
+  "second": {
+    "label": "Password",
+    "type": "password"
+  },
+  "button": "Salir",
+  "img": "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+}

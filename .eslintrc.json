@@ -1,22 +1,29 @@
 {
-	"env": {
-		"browser": true,
-		"es2020": true,
-		"node": true
-	},
-	"extends": ["plugin:react/recommended", "airbnb"],
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": 11,
-		"sourceType": "module"
-	},
-	"plugins": ["react"],
-	"rules": {
-		"import/prefer-default-export": "off",
-		"semi": "off",
-		"indent": ["error", "tab"],
-		"no-tabs": "off"
-	}
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "max-len": ["error", { "code": 80, "ignoreUrls": true, "ignoreComments": true }],
+    "import/prefer-default-export": "off",
+    "semi": "off",
+    "comma-dangle":"off",
+    "react/jsx-props-no-spreading": "off",
+    "react/button-has-type": "off",
+    "object-curly-newline": "off",
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-curly-newline": "off"
+  }
 }

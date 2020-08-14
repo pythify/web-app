@@ -1,0 +1,23 @@
+.PlayerPanel {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: player;
+}
+.PlayerPanelIcon {
+  width: 32px;
+  height: 32px;
+}
+.PlayerPanelIcon img {
+  margin-right: 14px;
+  width: 32px;
+}
+.PlayerPanelBar {
+  width: 80%;
+  height: 12px;
+  background-color: #535353;
+  border-radius: 12px;
+  margin-top: 12px;
+}

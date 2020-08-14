@@ -1,0 +1,70 @@
+{
+  "title": "Register",
+  "fields": [
+    {
+      "id": "register-form-first-name",
+      "label": "First name",
+      "input": {
+        "type": "text",
+        "placeholder": "John"
+      },
+      "registerProps": {
+        "required": "First name is required"
+      }
+    },
+    {
+      "id": "register-form-last-name",
+      "label": "Last name",
+      "input": {
+        "type": "text",
+        "placeholder": "Doe"
+      },
+      "registerProps": {
+        "required": "Last name is required"
+      }
+    },
+    {
+      "id": "register-form-username",
+      "label": "Username",
+      "input": {
+        "type": "text",
+        "placeholder": "john.doe"
+      },
+      "registerProps": {
+        "required": "Username is required (min 3 characters)",
+        "minLength": 3
+      }
+    },
+    {
+      "id": "register-form-email",
+      "label": "Email",
+      "input": {
+        "type": "email",
+        "placeholder": "john.doe@example.com"
+      },
+      "registerProps": {
+        "required": "Email is required"
+      }
+    },
+    {
+      "id": "register-form-password",
+      "label": "Password",
+      "input": {
+        "type": "password"
+      },
+      "registerProps": {
+        "required": "Password is required"
+      }
+    },
+    {
+      "id": "register-form-password-confirmation",
+      "label": "Confirm password",
+      "input": {
+        "type": "password"
+      },
+      "registerProps": {
+        "required": "Password must match"
+      }
+    }
+  ]
+}

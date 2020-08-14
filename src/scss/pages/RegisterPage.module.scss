@@ -1,0 +1,23 @@
+@import '../mixins.scss';
+
+.RegisterPage {
+  margin-top: 100px;
+  @include container;
+  @include display-grid;
+  @include grid-template-columns(1fr);
+  @include media(tablet) {
+    @include grid-template-columns(1fr 400px);
+  }
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      object-fit: fill;
+    }
+    h2 {
+      color: white;
+    }
+  }
+}

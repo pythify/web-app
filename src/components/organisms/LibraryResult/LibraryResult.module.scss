@@ -1,0 +1,22 @@
+@import '../../../scss/mixins.scss';
+
+.ArtistList {
+  grid-area: artist-list;
+  padding: 20px 50px;
+  overflow-y: scroll;
+  grid-area: 'artist-list';
+}
+
+.LibraryResult__list {
+  gap: 20px;
+  @include display-grid();
+  @include grid-template-columns(repeat(auto-fit, minmax(300px, 1fr)));
+}
+
+.LibraryResult__player {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
