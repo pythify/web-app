@@ -49,39 +49,6 @@ export function App() {
           <Route exact path="/login">
             <LoginPage />
           </Route>
-<<<<<<< HEAD
-=======
-          <Route exact path="/library">
-            <UserLogged>
-              {({ isAuth }) =>
-                isAuth ? (
-                  <Route exact path="/library">
-                    <Library />
-                  </Route>
-                ) : (
-                  <Route exact path="/library">
-                    <LoginPage />
-                  </Route>
-                )
-              }
-            </UserLogged>
-          </Route>
-          <Route exact path="/profile">
-            <UserLogged>
-              {({ isAuth }) =>
-                isAuth ? (
-                  <Route exact path="/profile">
-                    <ProfilePage />
-                  </Route>
-                ) : (
-                  <Route exact path="/profile">
-                    <LoginPage />
-                  </Route>
-                )
-              }
-            </UserLogged>
-          </Route>
->>>>>>> 5787b1f... library and profile mockups we're done
           <Route>
             <NotFound />
           </Route>
