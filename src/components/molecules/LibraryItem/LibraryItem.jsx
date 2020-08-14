@@ -4,13 +4,13 @@ import styles from './LibraryItem.module.scss';
 
 import { CoverAlbum } from '../../atoms';
 
-export function LibraryItem() {
+export function LibraryItem({ cover, albumName, title, album, urlsong }) {
   return (
     <div className={styles.Artist_listContainerItem}>
-      <CoverAlbum />
-      <h3>Title</h3>
+      <CoverAlbum cover={cover} albumName={albumName} />
+      <h3>{title}</h3>
       <div className={styles.Artist_listContainerDescription}>
-        <p>3:33</p>
+        <p>{album}</p>
       </div>
     </div>
   );

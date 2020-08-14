@@ -1,1 +1,1 @@
-export * from './LibraryResult'
+export * from './LibraryResult';
