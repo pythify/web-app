@@ -1,17 +1,22 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import styles from './RegisterForm.module.scss';
-import registerFormElements from './registerForm.json';
-import { FormField } from '../../molecules';
-import { Button } from '../../atoms';
-import { parseSignupData, sendSignupInfo } from './helpers';
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
+import { registerAsyncUser } from '../../../data/slices/user'
+
+import registerFormElements from './registerForm.json'
+import { FormField } from '../../molecules'
+import { Button } from '../../atoms'
+import { parseSignupData } from './helpers'
+
+import styles from './RegisterForm.module.scss'
 
 export function RegisterForm() {
-  const { handleSubmit, register, errors } = useForm();
+  const { handleSubmit, register, errors } = useForm()
+  const dispatch = useDispatch()
 
   async function onSubmit(data) {
-    const parsedData = parseSignupData(data);
-    await sendSignupInfo(parsedData);
+    const parsedData = parseSignupData(data)
+    dispatch(registerAsyncUser(parsedData))
   }
   return (
     <form className={styles.RegisterForm} onSubmit={handleSubmit(onSubmit)}>
@@ -30,5 +35,5 @@ export function RegisterForm() {
         <Button>Sign Up</Button>
       </div>
     </form>
-  );
+  )
 }

@@ -1,9 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './scss/global.scss';
-import { RegisterPage, LoginPage, Library, NotFound } from './pages';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import './scss/global.scss'
+import { RegisterPage, LoginPage, Library, NotFound } from './pages'
 
-const UserLogged = ({ children }) => children({ isAuth: true });
+const UserLogged = ({ children }) => {
+  const username = useSelector((state) => state.user.username)
+  children({ isAuth: username !== null })
+}
 
 export function App() {
   return (
@@ -27,13 +31,13 @@ export function App() {
                     <Route exact path="/library">
                       <Library />
                     </Route>
-                  );
+                  )
                 }
                 return (
                   <Route exact path="/library">
                     <LoginPage />
                   </Route>
-                );
+                )
               }}
             </UserLogged>
           </Route>
@@ -43,5 +47,5 @@ export function App() {
         </Switch>
       </Router>
     </>
-  );
+  )
 }
