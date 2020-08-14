@@ -10,10 +10,14 @@
   }
   &__banner {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     img {
       object-fit: fill;
+    }
+    h2 {
+      color: white;
     }
   }
 }

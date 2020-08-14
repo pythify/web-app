@@ -1,0 +1,40 @@
+{
+  "data": {
+    "album": {
+      "cover": "https://api.deezer.com/album/166640732/image",
+      "cover_big": "https://e-cdns-images.dzcdn.net/images/cover/44bcbf0529516c9376f6d602fd9c85cb/500x500-000000-80-0-0.jpg",
+      "cover_medium": "https://e-cdns-images.dzcdn.net/images/cover/44bcbf0529516c9376f6d602fd9c85cb/250x250-000000-80-0-0.jpg",
+      "cover_small": "https://e-cdns-images.dzcdn.net/images/cover/44bcbf0529516c9376f6d602fd9c85cb/56x56-000000-80-0-0.jpg",
+      "cover_xl": "https://e-cdns-images.dzcdn.net/images/cover/44bcbf0529516c9376f6d602fd9c85cb/1000x1000-000000-80-0-0.jpg",
+      "id": 166640732,
+      "title": "A Date With Destiny",
+      "tracklist": "https://api.deezer.com/album/166640732/tracks",
+      "type": "album"
+    },
+    "artist": {
+      "id": 8621674,
+      "link": "https://www.deezer.com/artist/8621674",
+      "name": "Gennadiy Alekseevich",
+      "picture": "https://api.deezer.com/artist/8621674/image",
+      "picture_big": "https://e-cdns-images.dzcdn.net/images/artist//500x500-000000-80-0-0.jpg",
+      "picture_medium": "https://e-cdns-images.dzcdn.net/images/artist//250x250-000000-80-0-0.jpg",
+      "picture_small": "https://e-cdns-images.dzcdn.net/images/artist//56x56-000000-80-0-0.jpg",
+      "picture_xl": "https://e-cdns-images.dzcdn.net/images/artist//1000x1000-000000-80-0-0.jpg",
+      "tracklist": "https://api.deezer.com/artist/8621674/top?limit=50",
+      "type": "artist"
+    },
+    "duration": 102,
+    "explicit_content_cover": 2,
+    "explicit_content_lyrics": 0,
+    "explicit_lyrics": False,
+    "id": 1049073092,
+    "link": "https://www.deezer.com/track/1049073092",
+    "preview": "https://cdns-preview-b.dzcdn.net/stream/c-b3da2ee5fb2f09e89789248d58aa881e-3.mp3",
+    "rank": 100000,
+    "readable": True,
+    "title": "Rock Trailer",
+    "title_short": "Rock Trailer",
+    "title_version": "",
+    "type": "track"
+  }
+}

@@ -8,9 +8,9 @@ export function Searcher() {
     <form className={styles.Searcher} action="submit">
       <SearcherInput />
       <div className={styles.Searcher__Options}>
-        <SearcherOptions />
-        <SearcherOptions />
-        <SearcherOptions />
+        <SearcherOptions props="Artist" />
+        <SearcherOptions props="Album" />
+        <SearcherOptions props="Song" />
       </div>
       <SearcherButton />
     </form>
