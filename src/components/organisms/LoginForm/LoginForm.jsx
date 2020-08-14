@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { loginAsyncUser } from '../../../data/slices/user'
@@ -12,10 +13,12 @@ import styles from './LoginForm.module.scss'
 export function LoginForm() {
   const { handleSubmit, register, errors } = useForm()
   const dispatch = useDispatch()
+  const { push } = useHistory()
 
   async function onSubmit(data) {
     const parsedData = parseSignupData(data)
     await dispatch(loginAsyncUser(parsedData))
+    push('/')
   }
 
   return (

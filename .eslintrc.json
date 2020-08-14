@@ -23,6 +23,7 @@
     "object-curly-newline": "off",
     "react/forbid-prop-types": "off",
     "jsx-a11y/media-has-caption": "off",
-    "implicit-arrow-linebreak": "off"
+    "implicit-arrow-linebreak": "off",
+    "react/jsx-curly-newline": "off"
   }
 }
