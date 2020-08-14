@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './ProfileImg.module.scss';
 
-export function ProfileImg() {
+export function ProfileImg({ props }) {
   return (
     <span className={styles.ProfileImage}>
-      <img src="" alt="" />
+      <img src={props} alt="user's avatar" />
     </span>
   );
 }

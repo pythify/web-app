@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './ProfileButton.module.scss';
 
-export function ProfileButton() {
-  return <button className={styles.ProfileButton}>Change Password</button>;
+export function ProfileButton({ props }) {
+  return (
+    <Link to="/" className={styles.ProfileButton}>
+      {props}
+    </Link>
+  );
 }

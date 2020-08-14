@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './TitleAside.module.scss';
 
-export function TitleAside() {
+export function TitleAside({ props }) {
   return (
     <div className={styles.MenuLink}>
-      <a href="">ARTIST</a>
+      <p>{props}</p>
     </div>
   );
 }

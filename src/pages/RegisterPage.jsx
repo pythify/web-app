@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { RegisterForm } from '../components/organisms';
 import { LogoTemplate } from '../templates';
 import styles from '../scss/pages/RegisterPage.module.scss';
@@ -8,9 +9,9 @@ export function RegisterPage() {
   return (
     <LogoTemplate>
       <div className={styles.RegisterPage}>
-        <figure className={styles.RegisterPage__banner}>
+        <Link to="/login" className={styles.RegisterPage__banner}>
           <img src={banner} alt="Banner" />
-        </figure>
+        </Link>
         <RegisterForm />
       </div>
     </LogoTemplate>
